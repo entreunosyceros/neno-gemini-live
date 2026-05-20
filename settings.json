@@ -1,0 +1,13 @@
+{
+    "face_auth_enabled": false,
+    "tool_permissions": {
+        "run_web_agent": true,
+        "write_file": true,
+        "read_directory": true,
+        "read_file": true,
+        "create_project": true,
+        "switch_project": true,
+        "list_projects": true
+    },
+    "kasa_devices": []
+}

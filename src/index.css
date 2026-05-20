@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------------------------------------------------
+ * Temas — Sobrescriben las clases cyan-* de Tailwind cuando el atributo
+ * data-theme se aplica en <html>. Mantenemos cyan como default (sin overrides)
+ * y creamos amber, magenta, emerald y violet. Cubrimos las tonalidades
+ * 100/300/400/500/600/700/800/900 que son las usadas por la UI actual
+ * (text/border/bg, incluido /20/30/50/80 alpha).
+ * --------------------------------------------------------------------- */
+
+:root {
+    --accent-rgb: 6 182 212; /* cyan-500 base */
+}
+
+[data-theme="amber"] { --accent-rgb: 245 158 11; }
+[data-theme="magenta"] { --accent-rgb: 217 70 239; }
+[data-theme="emerald"] { --accent-rgb: 16 185 129; }
+[data-theme="violet"] { --accent-rgb: 139 92 246; }
+
+/* Helper: genera reglas para text/border/bg para una shade dada. */
+[data-theme="amber"] .text-cyan-100, [data-theme="amber"] .text-cyan-100\/80 { color: rgb(255 251 235); }
+[data-theme="amber"] .text-cyan-300 { color: rgb(252 211 77); }
+[data-theme="amber"] .text-cyan-400 { color: rgb(251 191 36); }
+[data-theme="amber"] .text-cyan-500 { color: rgb(245 158 11); }
+[data-theme="amber"] .text-cyan-600 { color: rgb(217 119 6); }
+[data-theme="amber"] .text-cyan-700 { color: rgb(180 83 9); }
+
+[data-theme="amber"] .border-cyan-400 { border-color: rgb(251 191 36); }
+[data-theme="amber"] .border-cyan-500\/50 { border-color: rgb(245 158 11 / 0.5); }
+[data-theme="amber"] .border-cyan-700 { border-color: rgb(180 83 9); }
+[data-theme="amber"] .border-cyan-800 { border-color: rgb(146 64 14); }
+[data-theme="amber"] .border-cyan-900 { border-color: rgb(120 53 15); }
+[data-theme="amber"] .border-cyan-900\/30 { border-color: rgb(120 53 15 / 0.3); }
+[data-theme="amber"] .border-cyan-900\/50 { border-color: rgb(120 53 15 / 0.5); }
+
+[data-theme="amber"] .bg-cyan-400 { background-color: rgb(251 191 36); }
+[data-theme="amber"] .bg-cyan-500\/80 { background-color: rgb(245 158 11 / 0.8); }
+[data-theme="amber"] .bg-cyan-500\/20 { background-color: rgb(245 158 11 / 0.2); }
+[data-theme="amber"] .bg-cyan-900\/20 { background-color: rgb(120 53 15 / 0.2); }
+[data-theme="amber"] .bg-cyan-900 { background-color: rgb(120 53 15); }
+[data-theme="amber"] .bg-cyan-800 { background-color: rgb(146 64 14); }
+
+[data-theme="amber"] .accent-cyan-400 { accent-color: rgb(251 191 36); }
+[data-theme="amber"] .file\:bg-cyan-900::file-selector-button { background-color: rgb(120 53 15); }
+[data-theme="amber"] .file\:text-cyan-400::file-selector-button { color: rgb(251 191 36); }
+
+/* magenta */
+[data-theme="magenta"] .text-cyan-100, [data-theme="magenta"] .text-cyan-100\/80 { color: rgb(250 232 255); }
+[data-theme="magenta"] .text-cyan-300 { color: rgb(240 171 252); }
+[data-theme="magenta"] .text-cyan-400 { color: rgb(232 121 249); }
+[data-theme="magenta"] .text-cyan-500 { color: rgb(217 70 239); }
+[data-theme="magenta"] .text-cyan-600 { color: rgb(192 38 211); }
+[data-theme="magenta"] .text-cyan-700 { color: rgb(162 28 175); }
+[data-theme="magenta"] .border-cyan-400 { border-color: rgb(232 121 249); }
+[data-theme="magenta"] .border-cyan-500\/50 { border-color: rgb(217 70 239 / 0.5); }
+[data-theme="magenta"] .border-cyan-700 { border-color: rgb(162 28 175); }
+[data-theme="magenta"] .border-cyan-800 { border-color: rgb(134 25 143); }
+[data-theme="magenta"] .border-cyan-900 { border-color: rgb(112 26 117); }
+[data-theme="magenta"] .border-cyan-900\/30 { border-color: rgb(112 26 117 / 0.3); }
+[data-theme="magenta"] .border-cyan-900\/50 { border-color: rgb(112 26 117 / 0.5); }
+[data-theme="magenta"] .bg-cyan-400 { background-color: rgb(232 121 249); }
+[data-theme="magenta"] .bg-cyan-500\/80 { background-color: rgb(217 70 239 / 0.8); }
+[data-theme="magenta"] .bg-cyan-500\/20 { background-color: rgb(217 70 239 / 0.2); }
+[data-theme="magenta"] .bg-cyan-900\/20 { background-color: rgb(112 26 117 / 0.2); }
+[data-theme="magenta"] .bg-cyan-900 { background-color: rgb(112 26 117); }
+[data-theme="magenta"] .bg-cyan-800 { background-color: rgb(134 25 143); }
+[data-theme="magenta"] .accent-cyan-400 { accent-color: rgb(232 121 249); }
+[data-theme="magenta"] .file\:bg-cyan-900::file-selector-button { background-color: rgb(112 26 117); }
+[data-theme="magenta"] .file\:text-cyan-400::file-selector-button { color: rgb(232 121 249); }
+
+/* emerald */
+[data-theme="emerald"] .text-cyan-100, [data-theme="emerald"] .text-cyan-100\/80 { color: rgb(236 253 245); }
+[data-theme="emerald"] .text-cyan-300 { color: rgb(110 231 183); }
+[data-theme="emerald"] .text-cyan-400 { color: rgb(52 211 153); }
+[data-theme="emerald"] .text-cyan-500 { color: rgb(16 185 129); }
+[data-theme="emerald"] .text-cyan-600 { color: rgb(5 150 105); }
+[data-theme="emerald"] .text-cyan-700 { color: rgb(4 120 87); }
+[data-theme="emerald"] .border-cyan-400 { border-color: rgb(52 211 153); }
+[data-theme="emerald"] .border-cyan-500\/50 { border-color: rgb(16 185 129 / 0.5); }
+[data-theme="emerald"] .border-cyan-700 { border-color: rgb(4 120 87); }
+[data-theme="emerald"] .border-cyan-800 { border-color: rgb(6 95 70); }
+[data-theme="emerald"] .border-cyan-900 { border-color: rgb(6 78 59); }
+[data-theme="emerald"] .border-cyan-900\/30 { border-color: rgb(6 78 59 / 0.3); }
+[data-theme="emerald"] .border-cyan-900\/50 { border-color: rgb(6 78 59 / 0.5); }
+[data-theme="emerald"] .bg-cyan-400 { background-color: rgb(52 211 153); }
+[data-theme="emerald"] .bg-cyan-500\/80 { background-color: rgb(16 185 129 / 0.8); }
+[data-theme="emerald"] .bg-cyan-500\/20 { background-color: rgb(16 185 129 / 0.2); }
+[data-theme="emerald"] .bg-cyan-900\/20 { background-color: rgb(6 78 59 / 0.2); }
+[data-theme="emerald"] .bg-cyan-900 { background-color: rgb(6 78 59); }
+[data-theme="emerald"] .bg-cyan-800 { background-color: rgb(6 95 70); }
+[data-theme="emerald"] .accent-cyan-400 { accent-color: rgb(52 211 153); }
+[data-theme="emerald"] .file\:bg-cyan-900::file-selector-button { background-color: rgb(6 78 59); }
+[data-theme="emerald"] .file\:text-cyan-400::file-selector-button { color: rgb(52 211 153); }
+
+/* violet */
+[data-theme="violet"] .text-cyan-100, [data-theme="violet"] .text-cyan-100\/80 { color: rgb(245 243 255); }
+[data-theme="violet"] .text-cyan-300 { color: rgb(196 181 253); }
+[data-theme="violet"] .text-cyan-400 { color: rgb(167 139 250); }
+[data-theme="violet"] .text-cyan-500 { color: rgb(139 92 246); }
+[data-theme="violet"] .text-cyan-600 { color: rgb(124 58 237); }
+[data-theme="violet"] .text-cyan-700 { color: rgb(109 40 217); }
+[data-theme="violet"] .border-cyan-400 { border-color: rgb(167 139 250); }
+[data-theme="violet"] .border-cyan-500\/50 { border-color: rgb(139 92 246 / 0.5); }
+[data-theme="violet"] .border-cyan-700 { border-color: rgb(109 40 217); }
+[data-theme="violet"] .border-cyan-800 { border-color: rgb(91 33 182); }
+[data-theme="violet"] .border-cyan-900 { border-color: rgb(76 29 149); }
+[data-theme="violet"] .border-cyan-900\/30 { border-color: rgb(76 29 149 / 0.3); }
+[data-theme="violet"] .border-cyan-900\/50 { border-color: rgb(76 29 149 / 0.5); }
+[data-theme="violet"] .bg-cyan-400 { background-color: rgb(167 139 250); }
+[data-theme="violet"] .bg-cyan-500\/80 { background-color: rgb(139 92 246 / 0.8); }
+[data-theme="violet"] .bg-cyan-500\/20 { background-color: rgb(139 92 246 / 0.2); }
+[data-theme="violet"] .bg-cyan-900\/20 { background-color: rgb(76 29 149 / 0.2); }
+[data-theme="violet"] .bg-cyan-900 { background-color: rgb(76 29 149); }
+[data-theme="violet"] .bg-cyan-800 { background-color: rgb(91 33 182); }
+[data-theme="violet"] .accent-cyan-400 { accent-color: rgb(167 139 250); }
+[data-theme="violet"] .file\:bg-cyan-900::file-selector-button { background-color: rgb(76 29 149); }
+[data-theme="violet"] .file\:text-cyan-400::file-selector-button { color: rgb(167 139 250); }
+
+
+body {
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar Hide */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Scroll fino y temático (usa la variable --accent-rgb que cambia con el tema). */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--accent-rgb) / 0.45) transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--accent-rgb) / 0.35);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--accent-rgb) / 0.7);
+}
+
+.mask-image-gradient {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
