@@ -116,7 +116,6 @@ En otra terminal: `npm run dev` (o solo Vite si no necesitas Electron).
 | `VITE_SOCKET_URL` | URL fija del Socket.IO en el cliente |
 | `VITE_SOCKET_SAME_ORIGIN=true` | Socket en el mismo origen (p. ej. detrás de Apache) |
 
-Más detalle en [AGENTS.md](AGENTS.md) (red local, Apache, HTTPS en móvil).
 
 ---
 
@@ -147,7 +146,7 @@ Se crea/actualiza en la raíz o en `backend/settings.json` según el despliegue.
 
 ## Primer uso (checklist)
 
-1. **Voz:** Conectar (botón de encendido) y decir «Hola N.E.N.O».
+1. **Voz:** Conectar (botón de encendido) y decir «Hola NENO».
 2. **Cara:** Si face auth está activo, mirar a la cámara hasta desbloquear.
 3. **Vídeo:** Activar cámara en la barra de herramientas si quieres que el modelo vea.
 4. **Web:** Abrir ventana del navegador y pedir una tarea («abre Google», etc.).
@@ -157,8 +156,8 @@ Se crea/actualiza en la raíz o en `backend/settings.json` según el despliegue.
 
 ## Comandos de ejemplo
 
-- «Cambia al proyecto [nombre]» / «Crea un proyecto llamado [nombre]»
-- «Enciende la luz del salón» / «Pon la luz en azul»
+- «Cambia al proyecto [nombre]» 
+- «Enciende la luz del salón» 
 - «Abre el archivo informe.pdf» (según permisos de `open_document`)
 - «Ve a [sitio web] y busca…» (agente web)
 
